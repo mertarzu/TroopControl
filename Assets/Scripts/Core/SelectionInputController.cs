@@ -101,7 +101,6 @@ public class SelectionInputController : MonoBehaviour
         Vector3 max = Vector3.Max(v1, v2);
         min.z = camera.nearClipPlane;
         max.z = camera.farClipPlane;
-
         Bounds bounds = new Bounds();
         bounds.SetMinMax(min, max);
         return bounds;

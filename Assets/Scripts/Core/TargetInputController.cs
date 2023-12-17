@@ -43,15 +43,13 @@ public class TargetInputController : MonoBehaviour
             {
                 _target = null;
             }
-
         }
         else if (Input.GetMouseButton(0) && isDragging)
         {
             float clickDuration = Time.time - clickStartTime;
            
             if (clickDuration > .2f)
-            {              
-           
+            {                        
                 Ray ray2 = Camera.main.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit2;
 

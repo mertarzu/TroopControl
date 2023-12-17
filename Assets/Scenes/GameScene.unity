@@ -1121,18 +1121,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1989690359}
     m_Modifications:
-    - target: {fileID: 3730986867171046829, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3730986867171046829, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3730986867171046829, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8573377612254615457, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
       propertyPath: m_Name
       value: Unit
@@ -2169,14 +2157,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1989690359}
     m_Modifications:
-    - target: {fileID: 4682478457310449194, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
-      propertyPath: m_WarningMessage
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389335716543082220, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8573377612254615457, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
       propertyPath: m_Name
       value: Unit (8)
@@ -4379,14 +4359,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1989690359}
     m_Modifications:
-    - target: {fileID: 4682478457310449194, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
-      propertyPath: m_WarningMessage
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6389335716543082220, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8573377612254615457, guid: 4c1234b809ca37a4f954b11fcda9f215, type: 3}
       propertyPath: m_Name
       value: Unit (10)
@@ -5958,10 +5930,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1365188861}
   m_HandleRect: {fileID: 1281755625}
   m_Direction: 0
-  m_MinValue: 2
+  m_MinValue: 3
   m_MaxValue: 6
   m_WholeNumbers: 0
-  m_Value: 2
+  m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

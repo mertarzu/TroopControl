@@ -16,8 +16,8 @@ public class UIViewer : MonoBehaviour
 
     public void Initialize()
     {
-        InitializeSlider(_speedSlider, 5.0f, 5.0f, 10.0f, true);
-        InitializeSlider(_tresholdSlider, 2.0f, 2.0f, 6.0f, true);
+        InitializeSlider(_speedSlider, 5.0f, 5.0f, 8.0f, true);
+        InitializeSlider(_tresholdSlider, 3.0f, 3.0f, 6.0f, true);
         _speedSlider.onValueChanged.AddListener(delegate { UpdateSpeedValue(); });
         _tresholdSlider.onValueChanged.AddListener(delegate { UpdateTresholdValue(); });
     }
@@ -33,8 +33,8 @@ public class UIViewer : MonoBehaviour
     }
     private void Update()
     {
-        _tresholdText.text = "Treshold ";// + System.Math.Round(_tresholdSlider.value, 1);
-        _speedText.text = "Speed ";// + System.Math.Round(_speedSlider.value, 1);
+        _tresholdText.text = "Treshold ";
+        _speedText.text = "Speed ";
     }
 
    public void UpdateSelectedUnitsText(int number)
@@ -51,5 +51,4 @@ public class UIViewer : MonoBehaviour
     {
         OnSpeedChange(_speedSlider.value);
     }
-
 }

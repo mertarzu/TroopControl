@@ -17,7 +17,6 @@ public class Player : MonoBehaviour
         for (int i=0; i < count; i++)
         {
             selectedUnits.selectedUnits[i].PathFinder(target.position, count, i);
-            selectedUnits.selectedUnits[i].SetLookAtPosition(target.position);
         }            
     }
   
@@ -26,5 +25,4 @@ public class Player : MonoBehaviour
         uiController.UpdateUnitNumber(value);
     }
 
- 
 }

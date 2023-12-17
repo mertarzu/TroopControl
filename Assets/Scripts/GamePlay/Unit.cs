@@ -1,17 +1,15 @@
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
-using UnityEngine.AI;
+
 
 public class Unit : MonoBehaviour
 {
     [SerializeField] PathFinder _pathFinder;
     [SerializeField] GameObject _selectionBox;
     [SerializeField] UnitAnimation _unitAnimation;
+
     public void PathFinder(Vector3 targetPosition, int totalAgents, int agentIndex)
-    {     
-       
-        _pathFinder.NavigateUnit(targetPosition, totalAgents, agentIndex);
-        
+    {           
+        _pathFinder.NavigateUnit(targetPosition, totalAgents, agentIndex);       
     }
 
     public void SetSpeed(float speed)
@@ -32,10 +30,5 @@ public class Unit : MonoBehaviour
     public void DeactivateSelectionBox()
     {
         _selectionBox.SetActive(false);
-    }
-
-    public void SetLookAtPosition(Vector3 target)
-    {
-        _unitAnimation.SetLookAtPosition(target);
     }
 }

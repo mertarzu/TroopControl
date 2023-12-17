@@ -1,6 +1,6 @@
 # TroopControl
 
-TroopControl is a simple unit control game prototype built using Unity. It features unit selection, target assignment, adjustable parameters, and camera controls.
+TroopControl is a simple unit control game prototype built using Unity which I initially developed as a one-week project in April 2022. I have been updating it from time to time to enhance its features and gameplay. The game includes functionalities like unit selection, target assignment, circular formation, adjustable parameters, and camera controls.
 
 ## Unit Controls
 

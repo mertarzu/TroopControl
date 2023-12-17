@@ -1,40 +1,27 @@
 using System.Collections;
-using System.Net;
-using TMPro;
 using UnityEngine;
 using UnityEngine.AI;
-using static UnityEngine.GraphicsBuffer;
 
 public class PathFinder : MonoBehaviour
 {
-    [SerializeField] NavMeshAgent navMeshAgent;
+    [SerializeField] NavMeshAgent _navMeshAgent;
+    Vector3 _targetPosition;
     float _circleRadius;
-
+    float _speed = 5;
+   
     public void NavigateUnit(Vector3 targetPosition, int totalAgents, int agentIndex)
-    {      
+    {
+        _targetPosition = targetPosition;
         float angleIncrement = 360f / totalAgents;
         float angle = angleIncrement * agentIndex;
         Vector3 offset = Quaternion.Euler(0, angle, 0) * (Vector3.forward * _circleRadius);
         Vector3 agentPosition = targetPosition + offset;
+        _navMeshAgent.SetDestination(agentPosition);
+    }
 
-        navMeshAgent.SetDestination(agentPosition);
-        StartCoroutine(WaitForAgentToStopAndLookAt(targetPosition, agentPosition));
-    }
-    private IEnumerator WaitForAgentToStopAndLookAt(Vector3 lookAtPosition, Vector3 targetPosition)
-    {
-        while (Vector3.Distance(navMeshAgent.transform.position, targetPosition) > 1f)
-        {
-            yield return null; 
-        }
-        navMeshAgent.transform.LookAt(lookAtPosition);
-    }
-    public void SetLookAtPosition(Vector3 lookAtPosition)
-    {
-        navMeshAgent.transform.LookAt(lookAtPosition);
-    }
     public void SetSpeed(float speed)
     {
-        navMeshAgent.speed = speed;        
+        _navMeshAgent.speed = speed;        
     }
 
     public void SetTreshold(float treshold)
@@ -42,4 +29,9 @@ public class PathFinder : MonoBehaviour
         _circleRadius = treshold;       
     }
 
+    private void Update()
+    {
+        Quaternion targetRotation = Quaternion.LookRotation(_targetPosition - _navMeshAgent.transform.position);
+        _navMeshAgent.transform.rotation = Quaternion.Slerp(_navMeshAgent.transform.rotation, targetRotation, _speed * Time.deltaTime);
+    }
 }
